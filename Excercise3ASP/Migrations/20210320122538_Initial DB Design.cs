@@ -12,7 +12,7 @@ namespace Excercise3ASP.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Idnumber = table.Column<string>(type: "nvarchar(8)", nullable: false),
+                    Idnumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Course = table.Column<string>(type: "nvarchar(20)", nullable: false),
                     Year = table.Column<string>(type: "nvarchar(20)", nullable: false),

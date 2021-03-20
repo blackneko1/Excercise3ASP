@@ -2,9 +2,8 @@
 @model Excercise3ASP.Pages.StudentRecordModel
 @{
 }
-
-<div class="container">
-  
+<div asp-validation-summary="All" class="alert-danger font-italic"></div>
+<div class="container bg-secondary">
         <h1>Fill up form for Intramurals Tshirt</h1>
         <form method="post">
             <div class="form-group">
@@ -36,5 +35,6 @@
                 <input class="form-control" asp-for="StudentRegistrationForm.AmountPaid" />
             </div>
             <button class="btn btn-primary btn-block" type="submit">Save</button>
+            &nbsp;
         </form>
 </div>

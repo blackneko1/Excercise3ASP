@@ -22,10 +22,15 @@ namespace Excercise3ASP.Pages
         public void OnGet()
         {
         }
-        public void OnPost() 
+        public ActionResult OnPost() 
         {
+            if(!ModelState.IsValid) 
+            {
+                return Page();
+            }
             _studentFormDBContext.StudentRegistrationForm.Add(StudentRegistrationForm);
             _studentFormDBContext.SaveChanges();
+            return Redirect("/Index");
         }
     }
 }

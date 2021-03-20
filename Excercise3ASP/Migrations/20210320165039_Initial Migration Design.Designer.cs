@@ -3,14 +3,16 @@ using Excercise3ASP.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Excercise3ASP.Migrations
 {
     [DbContext(typeof(StudentFormDBContext))]
-    partial class StudentFormDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210320165039_Initial Migration Design")]
+    partial class InitialMigrationDesign
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
