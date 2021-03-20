@@ -1,0 +1,40 @@
+﻿@page
+@model Excercise3ASP.Pages.StudentRecordModel
+@{
+}
+
+<div class="container">
+  
+        <h1>Fill up form for Intramurals Tshirt</h1>
+        <form method="post">
+            <div class="form-group">
+                <label>Id Number</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.Idnumber" />
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.Name" />
+            </div>
+            <div class="form-group">
+                <label>Course</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.Course" />
+            </div>
+            <div class="form-group">
+                <label>Year</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.Year" />
+            </div>
+            <div class="form-group">
+                <label>TshirtColor</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.TshirtColor" />
+            </div>
+            <div class="form-group">
+                <label>Size</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.Size" />
+            </div>
+            <div class="form-group">
+                <label>AmountPaid</label>
+                <input class="form-control" asp-for="StudentRegistrationForm.AmountPaid" />
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Save</button>
+        </form>
+</div>
