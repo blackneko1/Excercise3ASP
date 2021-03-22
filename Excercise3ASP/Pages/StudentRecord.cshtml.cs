@@ -12,24 +12,29 @@ namespace Excercise3ASP.Pages
     {
         public StudentRecordModel(StudentFormDBContext studentFormDBContext) 
         {
-            _studentFormDBContext = studentFormDBContext;
+            _studentformdbcontext = studentFormDBContext;
         }
-        private readonly StudentFormDBContext _studentFormDBContext;
+        private readonly StudentFormDBContext _studentformdbcontext;
 
 
         [BindProperty]
         public StudentRegistrationForm StudentRegistrationForm { get; set; }
+
+        public List<StudentRegistrationForm> studentRegistrationForms = new List<StudentRegistrationForm>();
         public void OnGet()
         {
+            studentRegistrationForms = _studentformdbcontext.StudentRegistrationForm.ToList();
         }
         public ActionResult OnPost() 
         {
             if(!ModelState.IsValid) 
             {
+                studentRegistrationForms = _studentformdbcontext.StudentRegistrationForm.ToList();
                 return Page();
+
             }
-            _studentFormDBContext.StudentRegistrationForm.Add(StudentRegistrationForm);
-            _studentFormDBContext.SaveChanges();
+            _studentformdbcontext.StudentRegistrationForm.Add(StudentRegistrationForm);
+            _studentformdbcontext.SaveChanges();
             return Redirect("/Index");
         }
     }
