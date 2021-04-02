@@ -1,0 +1,41 @@
+﻿@page
+@model Excercise3ASP.Pages.EditModel
+@{
+}
+<div asp-validation-summary="All" class="alert-danger font-italic"></div>
+<div class="container bg-secondary">
+    <h1>Update Information</h1>
+    <form method="post">
+        <input type="hidden" asp-for="StudentRegistrationForm.ID" />
+        <div class="form-group">
+            <label>Id Number</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.Idnumber" />
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.Name" />
+        </div>
+        <div class="form-group">
+            <label>Course</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.Course" />
+        </div>
+        <div class="form-group">
+            <label>Year</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.Year" />
+        </div>
+        <div class="form-group">
+            <label>TshirtColor</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.TshirtColor" />
+        </div>
+        <div class="form-group">
+            <label>Size</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.Size" />
+        </div>
+        <div class="form-group">
+            <label>AmountPaid</label>
+            <input class="form-control" asp-for="StudentRegistrationForm.AmountPaid" />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Update</button>
+        &nbsp;
+    </form>
+</div>

@@ -37,5 +37,18 @@ namespace Excercise3ASP.Pages
             _studentformdbcontext.SaveChanges();
             return Redirect("/Index");
         }
+
+        public void OnGetDelete(int id)
+        {
+            var stud = _studentformdbcontext.StudentRegistrationForm.FirstOrDefault(student => student.ID == id);
+
+            if (stud != null)
+            {
+                _studentformdbcontext.StudentRegistrationForm.Remove(stud);
+                _studentformdbcontext.SaveChanges();
+            }
+           
+            OnGet();
+        }
     }
 }

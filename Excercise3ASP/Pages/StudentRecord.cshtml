@@ -41,6 +41,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>Student ID</th>
             <th>ID NUMBER</th>
             <th>NAME</th>
             <th>COURSE</th>
@@ -48,19 +49,22 @@
             <th>TSHIRT COLOR</th>
             <th>SIZE</th>
             <th>AMOUNT PAID</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var student in Model.studentRegistrationForms) { 
-            <tr>
-                <td>@student.Idnumber</td>
-                <td>@student.Name</td>
-                <td>@student.Course</td>
-                <td>@student.Year</td>
-                <td>@student.TshirtColor</td>
-                <td>@student.Size</td>
-                <td>@student.AmountPaid</td>
-            </tr>
+        <tr>
+            <td>@student.ID</td>
+            <td>@student.Idnumber</td>
+            <td>@student.Name</td>
+            <td>@student.Course</td>
+            <td>@student.Year</td>
+            <td>@student.TshirtColor</td>
+            <td>@student.Size</td>
+            <td>@student.AmountPaid</td>
+            <td><a asp-page="Edit" asp-route-id="@student.ID">Edit</a> | <a asp-page="StudentRecord" asp-page-handler="Delete" asp-route-id="@student.ID">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>
